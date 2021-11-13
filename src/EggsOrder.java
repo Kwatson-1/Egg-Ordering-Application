@@ -35,7 +35,7 @@ public class EggsOrder {
             }
             //Error trapping - user must order at least one egg.
         } else {
-            System.out.println("Error! You must purchase at least one egg.");
+            System.out.println("Error! You must purchase at least one egg. The program will now close.");
         }
     }
 }

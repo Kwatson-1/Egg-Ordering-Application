@@ -13,13 +13,24 @@ public class EggsOrder {
         System.out.print("How many eggs do you want to buy? : ");
         //error trapping - if input not integer
         while (!sc.hasNextInt()) {
+<<<<<<< Updated upstream
             System.out.print("Please input number value, How many eggs do you want to buy? : ");
+=======
+            System.out.print("Please correctly enter the number of eggs you wish to purchase as a value greater than 0.");
+>>>>>>> Stashed changes
             sc.nextLine();
         }
         eggs = sc.nextInt();
+<<<<<<< Updated upstream
 
         if(eggs >= 0) {
             amountOfDozen = eggs / 12;  
+=======
+        //Nested if else block to output the total cost of the eggs requested.
+        
+        if (eggs > 0) {
+            amountOfDozen = eggs / 12;
+>>>>>>> Stashed changes
             amountOfEggs = eggs % 12;
             totalCost = (amountOfDozen * 7.25) + (amountOfEggs * 0.75);
             if (amountOfDozen == 0) {

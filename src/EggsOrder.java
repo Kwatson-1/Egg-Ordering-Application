@@ -1,11 +1,12 @@
 
 import java.util.Scanner;
+
 /*
-* Classname: Java OOP
+* Unit: Java OOP
 * Team Name: Team 3
 * Programmers: Jae Kim, Kyle Watson and Kris Tribbeck.
-* Program description: This program prompts the user for the number of eggs 
-* in the order and then displays the amount owed with a full explanation.
+* Program description: prompts the user for the number of eggs 
+* they wish to order and provides cost breakdown analysis.
 * 
 * MIT License - Copyright(c) 2021 Jae Kim, Kyle Watson and Kristiin Tribbeck.
 * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,14 +18,14 @@ import java.util.Scanner;
 * The above copyright notice and this permission notice shall be included in all
 * copies or substantial portions of the Software.
 *
-*/
+ */
 public class EggsOrder {
 
     public static void main(String[] args) {
 
         // Creation of Scanner object and return of input stream.
         Scanner sc = new Scanner(System.in);
-        // Variable Declaration.
+        // Variable declaration.
         int eggs = 0;
         double totalCost;
         int amountOfDozen;
@@ -45,11 +46,18 @@ public class EggsOrder {
                 amountOfEggs = eggs % 12;
                 totalCost = (amountOfDozen * 7.25) + (amountOfEggs * 0.75);
                 if (amountOfDozen == 0) {
-                    System.out.println("You ordered " + eggs + " eggs. That is " + amountOfEggs + " eggs at $0.75 each for a total cost of $" + String.format("%.2f", totalCost) + ".");
+                    System.out.println("You ordered " + eggs + " eggs. That is "
+                            + amountOfEggs + " eggs at $0.75 each for a total cost of $"
+                            + String.format("%.2f", totalCost) + ".");
                 } else if (amountOfEggs == 0) {
-                    System.out.println("You ordered " + eggs + " eggs. That is " + amountOfDozen + " dozen eggs at $7.25 per dozen for a total cost of $" + String.format("%.2f", totalCost) + ".");
+                    System.out.println("You ordered " + eggs + " eggs. That is "
+                            + amountOfDozen + " dozen eggs at $7.25 per dozen for a total cost of $"
+                            + String.format("%.2f", totalCost) + ".");
                 } else {
-                    System.out.println("You ordered " + eggs + " eggs. That is " + amountOfDozen + " dozen eggs at $7.25 per dozen and " + amountOfEggs + " additional eggs at $0.75 each for a total cost of $" + String.format("%.2f", totalCost) + ".");
+                    System.out.println("You ordered " + eggs + " eggs. That is "
+                            + amountOfDozen + " dozen eggs at $7.25 per dozen and "
+                            + amountOfEggs + " additional eggs at $0.75 each for a total cost of $"
+                            + String.format("%.2f", totalCost) + ".");
                 }
                 // Error trapping - user must order at least one egg.
             } else {
